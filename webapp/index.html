@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Paws and Whiskers!</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <h1>Paws and Whiskers</h1>
+    <div class="container">
+        <div class="image-box dogs" id="dogsBox">
+            <h2>Paws</h2>
+            <ul id="dogImageList" class="image-list"></ul>
+        </div>
+        <div class="image-box cats" id="catsBox">
+            <h2>Whiskers</h2>
+            <ul id="catImageList" class="image-list"></ul>
+        </div>
+    </div>
+    <script>
+        const dogList = document.getElementById('dogImageList');
+        const catList = document.getElementById('catImageList');
+        const backgroundColors = ['#f4d942', '#83d4fa', '#a9e34b', '#ffa8a8', '#b19cd9'];
+
+        fetch('ImageDisplayServlet')
+            .then(response => response.json())
+            .then(imageUrls => {
+
+                imageUrls[0].forEach((url,index) => {
+                    const li = document.createElement('li');
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'Dog Image';
+                    li.style.backgroundColor = backgroundColors[index % backgroundColors.length]; // Set background color
+                    li.appendChild(img);
+                    dogList.appendChild(li);
+                });
+
+                imageUrls[1].forEach((url ,index) => {
+                    const li = document.createElement('li');
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'Cat Image';
+                    li.style.backgroundColor = backgroundColors[index % backgroundColors.length]; // Set background colorß
+                    li.appendChild(img);
+                    catList.appendChild(li);
+                });
+                
+            })
+            .catch(error => console.error('Error fetching image URLs:', error));
+    </script>
+</body>
+</html>

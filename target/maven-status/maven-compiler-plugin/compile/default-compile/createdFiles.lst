@@ -1,0 +1,5 @@
+servlets/DogsServlet.class
+servlets/CatsServlet.class
+servlets/LoginServlet.class
+servlets/ImageDisplayServlet.class
+servlets/LogoutServlet.class
