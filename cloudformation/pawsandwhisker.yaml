@@ -118,6 +118,7 @@ Resources:
           cd repo
           chmod +x deploy.sh
           ./deploy.sh
+
 Outputs:
   PublicDNSName:
     Description: Public DNS name of the EC2 instance
