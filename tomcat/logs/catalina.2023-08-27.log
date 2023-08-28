@@ -1,0 +1,1048 @@
+27-Aug-2023 17:58:34.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 17:58:34.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 17:58:34.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 17:58:34.153 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 17:58:34.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 17:58:34.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 17:58:34.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 17:58:34.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 17:58:34.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 17:58:34.184 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 17:58:34.449 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 17:58:34.473 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1011)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1040)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:276)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:231)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1324)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1337)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:652)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1009)
+		... 13 more
+27-Aug-2023 17:58:34.474 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [504] milliseconds
+27-Aug-2023 17:58:34.522 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 17:58:34.522 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 17:58:34.537 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 17:58:34.557 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 17:58:35.438 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [900] ms
+27-Aug-2023 17:58:35.439 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 17:58:35.467 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [28] ms
+27-Aug-2023 17:58:35.468 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 17:58:35.523 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [54] ms
+27-Aug-2023 17:58:35.523 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 17:58:35.778 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [255] ms
+27-Aug-2023 17:58:35.778 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 17:58:35.792 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [14] ms
+27-Aug-2023 17:58:35.792 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 17:58:35.810 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [18] ms
+27-Aug-2023 17:58:35.813 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1338] milliseconds
+27-Aug-2023 17:58:35.818 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:582)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+27-Aug-2023 17:58:35.818 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 17:58:35.818 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 17:58:35.838 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 17:58:35.839 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:00:58.777 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 18:00:58.780 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 18:00:58.780 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 18:00:58.780 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 18:00:58.780 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 18:00:58.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 18:00:58.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 18:00:58.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 18:00:58.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 18:00:58.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:00:58.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:00:58.796 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 18:00:58.796 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 18:00:58.797 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:00:58.798 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:00:58.798 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 18:00:58.815 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 18:00:59.095 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:00:59.121 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [507] milliseconds
+27-Aug-2023 18:00:59.161 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 18:00:59.161 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 18:00:59.175 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 18:00:59.190 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 18:01:00.018 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [843] ms
+27-Aug-2023 18:01:00.019 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 18:01:00.048 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [29] ms
+27-Aug-2023 18:01:00.048 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 18:01:00.102 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [54] ms
+27-Aug-2023 18:01:00.103 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 18:01:00.383 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [279] ms
+27-Aug-2023 18:01:00.383 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 18:01:00.400 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [17] ms
+27-Aug-2023 18:01:00.400 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 18:01:00.421 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [21] ms
+27-Aug-2023 18:01:00.424 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:01:00.436 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1314] milliseconds
+27-Aug-2023 18:16:16.744 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 18:16:16.750 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:16:16.759 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 18:16:16.802 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:16:16.808 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:16:33.356 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 18:16:33.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 18:16:33.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 18:16:33.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 18:16:33.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 18:16:33.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 18:16:33.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 18:16:33.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 18:16:33.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 18:16:33.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:16:33.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:16:33.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 18:16:33.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 18:16:33.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 18:16:33.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 18:16:33.392 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 18:16:33.644 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:16:33.669 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [498] milliseconds
+27-Aug-2023 18:16:33.708 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 18:16:33.709 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 18:16:33.722 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 18:16:33.736 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 18:16:34.631 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [909] ms
+27-Aug-2023 18:16:34.632 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 18:16:34.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [32] ms
+27-Aug-2023 18:16:34.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 18:16:34.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [38] ms
+27-Aug-2023 18:16:34.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 18:16:34.977 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [275] ms
+27-Aug-2023 18:16:34.978 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 18:16:34.992 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [14] ms
+27-Aug-2023 18:16:34.993 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 18:16:35.010 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [17] ms
+27-Aug-2023 18:16:35.013 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 18:16:35.024 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1354] milliseconds
+27-Aug-2023 19:02:10.882 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 19:02:10.889 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:02:10.907 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:02:10.972 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:02:10.986 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:03:15.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 19:03:15.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 19:03:15.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:03:15.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:03:15.327 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 19:03:15.327 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 19:03:15.327 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 19:03:15.327 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:03:15.328 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 19:03:15.345 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 19:03:15.599 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:03:15.625 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [520] milliseconds
+27-Aug-2023 19:03:15.665 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 19:03:15.665 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 19:03:15.678 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 19:03:15.695 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 19:03:16.584 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [905] ms
+27-Aug-2023 19:03:16.585 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 19:03:16.607 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [22] ms
+27-Aug-2023 19:03:16.607 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 19:03:16.644 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [37] ms
+27-Aug-2023 19:03:16.644 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 19:03:16.905 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [260] ms
+27-Aug-2023 19:03:16.905 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 19:03:16.920 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [15] ms
+27-Aug-2023 19:03:16.920 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 19:03:16.939 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [19] ms
+27-Aug-2023 19:03:16.942 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:03:16.953 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1328] milliseconds
+27-Aug-2023 19:14:56.285 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 19:14:56.289 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:14:56.298 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:14:56.353 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:14:56.369 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:15:07.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 19:15:07.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 19:15:07.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:15:07.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:15:07.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 19:15:07.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 19:15:07.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 19:15:07.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 19:15:07.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:15:07.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 19:15:07.387 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 19:15:07.607 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:15:07.629 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [416] milliseconds
+27-Aug-2023 19:15:07.663 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 19:15:07.663 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 19:15:07.681 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 19:15:07.703 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 19:15:08.526 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [844] ms
+27-Aug-2023 19:15:08.526 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 19:15:08.549 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [23] ms
+27-Aug-2023 19:15:08.549 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 19:15:08.589 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [40] ms
+27-Aug-2023 19:15:08.589 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 19:15:08.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [315] ms
+27-Aug-2023 19:15:08.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 19:15:08.924 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [20] ms
+27-Aug-2023 19:15:08.925 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 19:15:08.949 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [24] ms
+27-Aug-2023 19:15:08.952 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:15:08.964 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1334] milliseconds
+27-Aug-2023 19:15:13.967 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 19:15:13.967 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:15:13.971 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:15:13.990 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:15:13.997 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:44:22.803 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 19:44:22.806 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 19:44:22.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:44:22.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:44:22.825 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 19:44:22.825 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 19:44:22.825 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 19:44:22.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:44:22.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:44:22.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 19:44:22.842 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 19:44:23.101 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:44:23.123 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1011)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1040)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:276)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:231)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1324)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1337)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:652)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1009)
+		... 13 more
+27-Aug-2023 19:44:23.124 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [514] milliseconds
+27-Aug-2023 19:44:23.164 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 19:44:23.164 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 19:44:23.178 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 19:44:23.194 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 19:44:24.580 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 19:44:24.665 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,487] ms
+27-Aug-2023 19:44:24.667 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 19:44:24.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [51] ms
+27-Aug-2023 19:44:24.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 19:44:24.785 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [66] ms
+27-Aug-2023 19:44:24.786 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 19:44:25.198 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [413] ms
+27-Aug-2023 19:44:25.198 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 19:44:25.218 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [19] ms
+27-Aug-2023 19:44:25.218 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 19:44:25.242 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [24] ms
+27-Aug-2023 19:44:25.245 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2121] milliseconds
+27-Aug-2023 19:44:25.251 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:582)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+27-Aug-2023 19:44:25.252 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:44:25.252 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:44:25.273 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:44:25.275 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:51:11.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 19:51:11.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 19:51:11.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 19:51:11.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 19:51:11.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 19:51:11.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 19:51:11.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 19:51:11.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 19:51:11.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 19:51:11.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:51:11.501 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:51:11.510 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 19:51:11.510 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 19:51:11.510 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 19:51:11.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 19:51:11.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:51:11.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:51:11.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 19:51:11.526 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 19:51:11.760 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:51:11.775 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1011)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1040)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:276)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:231)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1324)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1337)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:652)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1009)
+		... 13 more
+27-Aug-2023 19:51:11.775 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [441] milliseconds
+27-Aug-2023 19:51:11.806 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 19:51:11.806 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 19:51:11.819 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 19:51:11.833 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 19:51:13.247 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 19:51:13.288 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,469] ms
+27-Aug-2023 19:51:13.289 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 19:51:13.316 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [26] ms
+27-Aug-2023 19:51:13.316 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 19:51:13.351 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [35] ms
+27-Aug-2023 19:51:13.352 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 19:51:13.660 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [307] ms
+27-Aug-2023 19:51:13.660 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 19:51:13.679 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [19] ms
+27-Aug-2023 19:51:13.680 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 19:51:13.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [21] ms
+27-Aug-2023 19:51:13.704 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1928] milliseconds
+27-Aug-2023 19:51:13.709 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:582)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+27-Aug-2023 19:51:13.710 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:51:13.710 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:51:13.730 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:51:13.731 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:52:16.327 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 19:52:16.331 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 19:52:16.331 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 19:52:16.331 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 19:52:16.331 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 19:52:16.331 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 19:52:16.331 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 19:52:16.332 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 19:52:16.332 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 19:52:16.332 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:52:16.332 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:52:16.344 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 19:52:16.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 19:52:16.346 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 19:52:16.346 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:52:16.346 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:52:16.346 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 19:52:16.359 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 19:52:16.582 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:52:16.604 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [464] milliseconds
+27-Aug-2023 19:52:16.636 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 19:52:16.636 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 19:52:16.649 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 19:52:16.664 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 19:52:17.216 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 19:52:17.250 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [601] ms
+27-Aug-2023 19:52:17.251 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 19:52:17.278 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [27] ms
+27-Aug-2023 19:52:17.278 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 19:52:17.312 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [34] ms
+27-Aug-2023 19:52:17.312 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 19:52:17.564 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [252] ms
+27-Aug-2023 19:52:17.564 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 19:52:17.580 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [16] ms
+27-Aug-2023 19:52:17.580 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 19:52:17.599 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [19] ms
+27-Aug-2023 19:52:17.601 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:52:17.611 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1006] milliseconds
+27-Aug-2023 19:52:29.136 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 19:52:29.137 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:52:29.141 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:52:29.159 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:52:29.165 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:57:45.647 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 19:57:45.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 19:57:45.650 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 19:57:45.651 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:57:45.652 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 19:57:45.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 19:57:45.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 19:57:45.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:57:45.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 19:57:45.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 19:57:45.675 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 19:57:45.904 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:57:45.939 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [452] milliseconds
+27-Aug-2023 19:57:45.986 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 19:57:45.986 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 19:57:46.004 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 19:57:46.025 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 19:57:46.991 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 19:57:47.031 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,027] ms
+27-Aug-2023 19:57:47.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 19:57:47.061 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [29] ms
+27-Aug-2023 19:57:47.062 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 19:57:47.105 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [43] ms
+27-Aug-2023 19:57:47.106 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 19:57:47.400 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [293] ms
+27-Aug-2023 19:57:47.400 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 19:57:47.421 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [21] ms
+27-Aug-2023 19:57:47.422 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 19:57:47.448 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [26] ms
+27-Aug-2023 19:57:47.452 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:57:47.464 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1524] milliseconds
+27-Aug-2023 19:57:51.367 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 19:57:51.368 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:57:51.372 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 19:57:51.394 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 19:57:51.405 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:01:47.233 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:01:47.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:01:47.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:01:47.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:01:47.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:01:47.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:01:47.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:01:47.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:01:47.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:01:47.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:01:47.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:01:47.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:01:47.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:01:47.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:01:47.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:01:47.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:01:47.246 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:01:47.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:01:47.260 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:01:47.474 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:01:47.496 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [419] milliseconds
+27-Aug-2023 20:01:47.532 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:01:47.532 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:01:47.545 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:01:47.560 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 20:01:48.089 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:01:48.118 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [572] ms
+27-Aug-2023 20:01:48.119 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:01:48.151 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [32] ms
+27-Aug-2023 20:01:48.151 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:01:48.195 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [43] ms
+27-Aug-2023 20:01:48.195 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:01:48.423 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [228] ms
+27-Aug-2023 20:01:48.423 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:01:48.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [15] ms
+27-Aug-2023 20:01:48.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:01:48.457 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [19] ms
+27-Aug-2023 20:01:48.459 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:01:48.469 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [973] milliseconds
+27-Aug-2023 20:03:59.051 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/pawsandwhiskers]
+27-Aug-2023 20:03:59.101 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:03:59.522 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:03:59.524 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [423] ms
+27-Aug-2023 20:04:10.029 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/pawsandwhiskers]
+27-Aug-2023 20:05:15.496 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 20:05:15.497 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:05:15.500 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 20:05:15.509 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:05:15.513 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:05:33.058 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:05:33.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:05:33.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:05:33.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:05:33.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:05:33.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:05:33.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:05:33.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:05:33.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:05:33.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:05:33.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:05:33.075 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:05:33.076 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:05:33.077 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:05:33.077 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:05:33.092 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:05:33.328 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:05:33.351 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [495] milliseconds
+27-Aug-2023 20:05:33.383 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:05:33.383 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:05:33.396 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:05:35.533 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:05:35.567 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [2,170] ms
+27-Aug-2023 20:05:35.567 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:05:35.593 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [25] ms
+27-Aug-2023 20:05:35.593 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:05:35.627 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [34] ms
+27-Aug-2023 20:05:35.627 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:05:35.890 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [263] ms
+27-Aug-2023 20:05:35.890 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:05:35.910 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [20] ms
+27-Aug-2023 20:05:35.910 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:05:35.937 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [27] ms
+27-Aug-2023 20:05:35.940 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:05:35.953 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2601] milliseconds
+27-Aug-2023 20:20:17.017 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context [/pawsandwhiskers]
+27-Aug-2023 20:20:17.022 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/pawsandwhiskers] has started
+27-Aug-2023 20:20:17.481 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:20:17.484 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/pawsandwhiskers] is completed
+27-Aug-2023 20:22:00.315 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 20:22:00.317 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:22:00.320 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 20:22:00.344 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:22:00.358 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:34:38.441 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:34:38.444 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:34:38.445 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:34:38.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:34:38.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:34:38.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:34:38.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:34:38.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:34:38.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:34:38.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:34:38.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:34:38.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:34:38.479 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:34:38.739 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:34:38.759 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1011)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1040)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:276)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:231)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1324)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1337)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:652)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1009)
+		... 13 more
+27-Aug-2023 20:34:38.760 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [499] milliseconds
+27-Aug-2023 20:34:38.802 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:34:38.802 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:34:38.816 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:34:39.867 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:34:39.908 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,092] ms
+27-Aug-2023 20:34:39.909 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:34:39.935 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [26] ms
+27-Aug-2023 20:34:39.936 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:34:39.968 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [32] ms
+27-Aug-2023 20:34:39.968 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:34:40.188 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [219] ms
+27-Aug-2023 20:34:40.188 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:34:40.208 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [19] ms
+27-Aug-2023 20:34:40.208 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:34:40.229 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [21] ms
+27-Aug-2023 20:34:40.232 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1471] milliseconds
+27-Aug-2023 20:34:40.237 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:582)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+27-Aug-2023 20:34:40.238 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:34:40.238 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 20:34:40.257 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:34:40.258 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:36:47.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:36:47.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:36:47.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:36:47.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:36:47.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:36:47.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:36:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:36:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:36:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:36:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:36:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:36:47.645 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:36:47.908 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:36:47.940 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [541] milliseconds
+27-Aug-2023 20:36:47.983 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:36:47.983 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:36:47.997 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:36:48.012 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 20:36:49.331 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:36:49.363 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,365] ms
+27-Aug-2023 20:36:49.364 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:36:49.385 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [21] ms
+27-Aug-2023 20:36:49.385 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:36:49.415 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [29] ms
+27-Aug-2023 20:36:49.415 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:36:49.663 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [248] ms
+27-Aug-2023 20:36:49.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:36:49.682 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [18] ms
+27-Aug-2023 20:36:49.682 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:36:49.704 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [22] ms
+27-Aug-2023 20:36:49.708 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:36:49.720 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1780] milliseconds
+27-Aug-2023 20:44:07.054 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 20:44:07.058 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:44:07.068 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 20:44:07.124 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:44:07.136 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:44:24.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:44:24.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:44:24.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:44:24.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:44:24.784 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:44:24.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:44:24.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:44:24.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:44:24.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:44:24.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:44:24.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:44:24.798 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:44:25.039 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:44:25.065 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [473] milliseconds
+27-Aug-2023 20:44:25.102 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:44:25.103 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:44:25.116 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:44:25.130 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 20:44:26.819 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:44:26.855 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,738] ms
+27-Aug-2023 20:44:26.856 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:44:26.879 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [23] ms
+27-Aug-2023 20:44:26.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:44:26.917 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [37] ms
+27-Aug-2023 20:44:26.917 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:44:27.177 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [260] ms
+27-Aug-2023 20:44:27.177 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:44:27.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [28] ms
+27-Aug-2023 20:44:27.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:44:27.243 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [37] ms
+27-Aug-2023 20:44:27.249 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:44:27.265 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2199] milliseconds
+27-Aug-2023 20:45:27.301 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.reload Reloading context [/pawsandwhiskers]
+27-Aug-2023 20:45:27.303 INFO [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/pawsandwhiskers] has started
+27-Aug-2023 20:45:27.355 INFO [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/pawsandwhiskers] is completed
+27-Aug-2023 20:45:37.861 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/pawsandwhiskers]
+27-Aug-2023 20:46:36.928 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 20:46:36.929 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:46:36.934 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 20:46:36.949 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:46:36.961 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:48:32.601 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:48:32.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:48:32.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:48:32.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:48:32.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:48:32.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:48:32.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:48:32.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:48:32.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:48:32.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:48:32.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:48:32.617 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:48:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:48:32.632 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:48:32.859 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:48:32.882 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [455] milliseconds
+27-Aug-2023 20:48:32.915 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:48:32.915 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:48:32.927 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:48:33.951 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:48:33.979 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,052] ms
+27-Aug-2023 20:48:33.980 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:48:34.002 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [22] ms
+27-Aug-2023 20:48:34.002 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:48:34.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [30] ms
+27-Aug-2023 20:48:34.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:48:34.325 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [293] ms
+27-Aug-2023 20:48:34.326 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:48:34.340 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [14] ms
+27-Aug-2023 20:48:34.341 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:48:34.363 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [22] ms
+27-Aug-2023 20:48:34.366 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:48:34.379 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1496] milliseconds
+27-Aug-2023 20:51:03.585 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 20:51:03.586 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:51:03.591 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 20:51:03.616 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:51:03.630 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:51:10.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 20:51:10.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 20:51:10.891 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 20:51:10.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:51:10.892 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:51:10.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 20:51:10.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 20:51:10.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 20:51:10.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 20:51:10.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 20:51:10.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:51:10.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 20:51:10.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 20:51:10.923 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 20:51:11.176 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:51:11.198 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [505] milliseconds
+27-Aug-2023 20:51:11.228 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 20:51:11.228 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 20:51:11.239 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 20:51:11.253 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 20:51:12.492 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 20:51:12.522 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,282] ms
+27-Aug-2023 20:51:12.522 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 20:51:12.545 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [23] ms
+27-Aug-2023 20:51:12.545 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 20:51:12.576 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [31] ms
+27-Aug-2023 20:51:12.577 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 20:51:12.947 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [370] ms
+27-Aug-2023 20:51:12.948 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 20:51:12.979 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [32] ms
+27-Aug-2023 20:51:12.979 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 20:51:13.037 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [58] ms
+27-Aug-2023 20:51:13.041 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 20:51:13.062 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1863] milliseconds
+27-Aug-2023 21:01:27.943 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 21:01:27.947 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:01:27.957 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 21:01:28.003 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:01:28.016 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:01:36.776 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.78
+27-Aug-2023 21:01:36.780 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2023 13:15:43 UTC
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.78.0
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.5.1
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.8+7
+27-Aug-2023 21:01:36.781 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+27-Aug-2023 21:01:36.782 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 21:01:36.782 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 21:01:36.803 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Aug-2023 21:01:36.804 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Aug-2023 21:01:36.804 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+27-Aug-2023 21:01:36.804 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Aug-2023 21:01:36.804 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Aug-2023 21:01:36.804 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/conf/logging.properties
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat
+27-Aug-2023 21:01:36.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/temp
+27-Aug-2023 21:01:36.822 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/pydiv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+27-Aug-2023 21:01:37.093 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:01:37.119 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [557] milliseconds
+27-Aug-2023 21:01:37.161 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Aug-2023 21:01:37.162 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.78]
+27-Aug-2023 21:01:37.174 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war]
+27-Aug-2023 21:01:37.190 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers] was found with a last modified time that did not match the associated WAR. It will be deleted.
+27-Aug-2023 21:01:38.689 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+27-Aug-2023 21:01:38.720 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war] has finished in [1,545] ms
+27-Aug-2023 21:01:38.720 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs]
+27-Aug-2023 21:01:38.741 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/docs] has finished in [21] ms
+27-Aug-2023 21:01:38.741 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager]
+27-Aug-2023 21:01:38.772 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/manager] has finished in [31] ms
+27-Aug-2023 21:01:38.773 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples]
+27-Aug-2023 21:01:38.982 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/examples] has finished in [208] ms
+27-Aug-2023 21:01:38.982 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT]
+27-Aug-2023 21:01:38.996 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/ROOT] has finished in [14] ms
+27-Aug-2023 21:01:38.996 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager]
+27-Aug-2023 21:01:39.016 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/pydiv/JAM/2023Aug/pawsandwhiskers/tomcat/webapps/host-manager] has finished in [19] ms
+27-Aug-2023 21:01:39.018 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:01:39.030 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1910] milliseconds
+27-Aug-2023 21:02:25.401 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+27-Aug-2023 21:02:25.407 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:02:25.411 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Aug-2023 21:02:25.434 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Aug-2023 21:02:25.446 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

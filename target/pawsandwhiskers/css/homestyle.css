@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #262626;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header {
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: blue;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}

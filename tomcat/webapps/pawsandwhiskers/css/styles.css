@@ -1,22 +1,10 @@
-/* Reset default margin and padding for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Align content vertically */
-    align-items: center; /* Center content horizontally */
-}
-h1 {
-    margin-top: 20px; /* Add margin for top spacing */
-    color: #ff00ff; /* Unicorn color for the h1 title */
+.content {
+    padding: 20px;
 }
 .container {
     display: flex;
@@ -26,7 +14,6 @@ h1 {
 }
 
 .image-box {
-    width: 50%; /* Set the width to cover 50% of the page */
     height: 100vh; /* Set the height to cover the entire viewport height */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -41,7 +28,7 @@ h1 {
 .image-box h2 {
     margin-top: 0;
     font-size: 24px;
-    color: #ff00ff; /* Unicorn color for the section titles */
+   
 }
 
 .image-box ul {
@@ -52,20 +39,10 @@ h1 {
 .image-box li {
     margin-bottom: 10px;
 }
-
-.image-box img {
-    width: 100%; /* Make each image the same width */
-    height: auto;
-    max-height: 150px; /* Set a fixed height for the images */
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Add cursor style for clickable images */
-}
 /* Custom styles for colorful tiles */
 .image-box.dogs {
     color: #83d4fa; /* White text color for dogs section */
     background-image: url('dog_bg.jpg'); /* Replace with actual cat image */
-    animation: slideInLeft 1s ease-in-out; /* Animation for sliding in from the left */
     height: 100vh;
     justify-content: center; /* Start cat images from the top */
     align-items: center; /* Center horizontally */
@@ -81,7 +58,7 @@ h1 {
     color: #ff00ff; /* Unicorn pink text color for cats section */
     border: 20px solid #ff00ff; /* Unicorn pink border */
     box-shadow: 0 12px 24px rgba(255, 0, 255, 0.6); /* Unicorn pink shiny box shadow effect */
-    animation: slideInRight 1s ease-in-out; /* Animation for sliding in from the right */
+  
 }
 
 .image-list {
@@ -99,9 +76,21 @@ h1 {
     padding: 10px; /* Add padding to make the background box larger */
     box-sizing: border-box;
 }
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Set a fixed height for the images */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Add cursor style for clickable images */
+    object-fit: cover; /* Maintain aspect ratio while covering container */
+}
 
 .image-list img {
-    width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%;
+    max-height: 150px; /* Set a maximum height for the images */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    object-fit: cover; /* Maintain aspect ratio while covering container */
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paws - Adopt Dogs</title>
+    <link rel="stylesheet" type="text/css" href="css/homestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Paws and Whiskers</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                        <a class="nav-link" href="index.html">Home</a>
+                  
+                        <a class="nav-link" href="dogs.html">Paws</a>
+                  
+                        <a class="nav-link" href="cats.html">Whiskers</a>
+               
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Adopt Dogs</h1>
+        <div class="image-box dogs" id="dogsBox">
+            <h2>Paws</h2>
+            <ul id="dogImageList" class="image-list"></ul>
+        </div>
+    </div>
+    <script>
+        const dogList = document.getElementById('dogImageList');
+        const backgroundColors = ['#f4d942', '#83d4fa', '#a9e34b', '#ffa8a8', '#b19cd9'];
+
+        fetch('ImageDisplayServlet')
+            .then(response => response.json())
+            .then(imageUrls => {
+
+                imageUrls[0].forEach((url,index) => {
+                    const li = document.createElement('li');
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'Dog Image';
+                    li.style.backgroundColor = backgroundColors[index % backgroundColors.length]; // Set background color
+                    li.appendChild(img);
+                    dogList.appendChild(li);
+                });
+                
+            })
+            .catch(error => console.error('Error fetching image URLs:', error));
+    </script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+</body>
+</html>
