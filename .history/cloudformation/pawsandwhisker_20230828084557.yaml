@@ -1,0 +1,71 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Template to create a VPC, Subnets, and EC2 instance
+
+Parameters:
+  Region:
+    Description: AWS Region to deploy resources
+    Type: String
+    Default: us-east-2
+    AllowedValues:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      # Add more regions as needed
+    ConstraintDescription: Must be a valid AWS region name
+
+  #ami-0773d5f16c0189a6c -us-east-2 ami.
+  AmiId:
+    Description: ID of the Amazon Machine Image (AMI) to use for the EC2 instance
+    Type: String
+    Default: ami-0773d5f16c0189a6c
+
+  KeyPairName:
+    Description: Name of the existing EC2 key pair to use
+    Type: String
+    Default: pawsandwhiskersKey
+
+  AZ: 
+    Description: Name of the existing EC2 key pair to use
+    Type: String
+    Default: us-east-2a
+
+Resources:
+  PawsAndWhiskers:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: PawsAndWhiskers
+
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref PawsAndWhiskers
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: !Ref AZ
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: PublicSubnet1
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      KeyName: !Ref KeyPairName
+      ImageId: !Ref AmiId
+      SubnetId: !Ref PublicSubnet1
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          echo "Hello from UserData script!"
+          apt-get update
+          apt-get install -y git
+          git clone https://github.com/your/repo.git
+          cd repo
+          chmod +x deploy.sh
+          ./deploy.sh
