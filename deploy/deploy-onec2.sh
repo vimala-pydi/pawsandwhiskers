@@ -1,13 +1,15 @@
 #!/bin/bash
 
-
+#cp -rf src/main/webapps/* target/pawsandwhiskers/
 echo "compile"
 #Run this from the target folder of the project
 #yum install java-devel
+#sudo yum install java-1.7.0-openjdk-devel -y
 #Compile
 javac -classpath "../tomcat/lib/servlet-api.jar:../lib/*" -d "./classes" "../src/main/java/servlets/ImageDisplayServlet.java"
 echo "compile complete"
 
+cp -rf src/main/webapps/* target/pawsandwhiskers/
 echo "create war file"
 mkdir -p ./pawsandwhiskers
 cp -rf ./classes/ ./pawsandwhiskers/WEB-INF/
