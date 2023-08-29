@@ -8,7 +8,8 @@ echo "Project root is" $PROJECT_ROOT
 
 # Remove existing project artifacts
 echo "Cleaning up existing files..."
-rm -rf "$PROJECT_ROOT/target" # Remove the entire target directory
+rm -rf "$PROJECT_ROOT/target/classes/servlet" # Remove the entire target directory
+rm -f "$TOMCAT_PATH/webapps/pawsandwhiskers.war" # Remove the deployed WAR file
 
 # Compile
 echo "Compilation started!"
@@ -19,11 +20,6 @@ if [ $? -ne 0 ]; then
 fi
 echo "Compilation complete!"
 
-
-
-
-rm -f "$TOMCAT_PATH/webapps/pawsandwhiskers.war" # Remove the deployed WAR file
-rm -f "$TOMCAT_PATH/webapps/pawsandwhiskers"
 # Create WAR file
 echo "Creating WAR file..."
 mkdir -p "$PROJECT_ROOT/target/pawsandwhiskers/WEB-INF/classes"
@@ -33,23 +29,24 @@ cp -r "$PROJECT_ROOT/target/classes/" "$PROJECT_ROOT/target/pawsandwhiskers/WEB-
 cp "$PROJECT_ROOT/lib/"* "$PROJECT_ROOT/target/pawsandwhiskers/WEB-INF/lib/"
 cd "$PROJECT_ROOT/target/pawsandwhiskers/"
 jar cvf "$PROJECT_ROOT/target/pawsandwhiskers.war" *
+
 if [ $? -ne 0 ]; then
     echo "Creating WAR file failed. Exiting..."
     exit 1
 fi
 echo "WAR file created successfully."
 
-
 # Deploy to Tomcat
 cp "$PROJECT_ROOT/target/pawsandwhiskers.war" "$TOMCAT_PATH/webapps/"
 
 # Start Tomcat
+echo "Starting Tomcat..."
 "$TOMCAT_PATH/bin/startup.sh"
 if [ $? -ne 0 ]; then
     echo "Starting Tomcat failed. Exiting..."
     exit 1
 fi
-echo "Web application deployed and Tomcat started. Access it at: http://localhost:8080/pawsandwhiskers/"
+echo "Tomcat started. Access it at: http://localhost:8080/pawsandwhiskers/"
 
 # Wait for user input to stop Tomcat
 read -p "Press Enter to stop Tomcat..."
