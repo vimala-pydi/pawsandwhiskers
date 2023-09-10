@@ -1,0 +1,14 @@
+tomcat/logs/catalina.2023-08-28.log
+tomcat/logs/catalina.2023-08-28.log
+tomcat/logs/catalina.2023-08-29.log
+tomcat/logs/catalina.out
+tomcat/logs/host-manager.2023-08-29.log
+tomcat/logs/localhost_access_log.2023-08-28.txt
+tomcat/logs/localhost_access_log.2023-08-29.txt
+tomcat/logs/localhost.2023-08-28.log
+tomcat/logs/localhost.2023-08-29.log
+tomcat/logs/manager.2023-08-29.log
+tomcat/logs/*
+.history/*
+.vscode/*
+target/pawsandwhiskers/*
