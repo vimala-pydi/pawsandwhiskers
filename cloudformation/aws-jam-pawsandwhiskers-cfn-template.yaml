@@ -1,0 +1,671 @@
+Description: >
+  This templates provisions the base infrastructure required for Migrating Java app to ECS and modernize using RefactorSpaces.
+  Jam Name - Paws and Whiskers in ECS.
+  
+  
+Parameters:
+
+# Source ENV Parameters 
+  SourceEnvironmentName:
+    Description: An environment name that will be prefixed to resource names
+    Type: String
+    Default: paws-and-whiskers-source
+
+  SourceVpcCIDR: 
+    Description: Please enter the IP range (CIDR notation) for this VPC
+    Type: String
+    Default: 10.0.0.0/16
+
+  SourcePublicSubnet1CIDR:
+    Description: Please enter the IP range (CIDR notation) for the public subnet in the first Availability Zone
+    Type: String
+    Default: 10.0.0.0/19
+    
+  SourcePublicSubnet2CIDR:
+    Description: Please enter the IP range (CIDR notation) for the public subnet in the second Availability Zone
+    Type: String
+    Default: 10.0.32.0/19
+    
+  SourceLatestAmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    Description: Use an AMI of your choosing, we recommend to use the latest available
+    
+  SourceEC2InstanceType:
+    Description: Please enter the Type of EC2 instance to run Source JAM application
+    Type: String
+    Default: t3.medium
+    
+
+
+# Target ENV Parameters
+    
+  TargetEnvironmentName:
+    Description: An environment name that will be prefixed to resource names
+    Type: String
+    Default: paws-and-whiskers-target
+
+  TargetVpcCIDR: 
+    Description: Please enter the IP range (CIDR notation) for this VPC
+    Type: String
+    Default: 192.168.0.0/16
+
+  TargetPublicSubnet1CIDR:
+    Description: Please enter the IP range (CIDR notation) for the public subnet in the first Availability Zone
+    Type: String
+    Default: 192.168.0.0/19
+
+  TargetPublicSubnet2CIDR:
+    Description: Please enter the IP range (CIDR notation) for the public subnet in the second Availability Zone
+    Type: String
+    Default: 192.168.32.0/19
+
+  TargetPrivateSubnet1CIDR:
+    Description: Please enter the IP range (CIDR notation) for the private subnet in the first Availability Zone
+    Type: String
+    Default: 192.168.64.0/19
+
+  TargetPrivateSubnet2CIDR:
+    Description: Please enter the IP range (CIDR notation) for the private subnet in the second Availability Zone
+    Type: String
+    Default: 192.168.96.0/19
+
+
+Resources:
+
+# Source ENV Resources 
+  SourceVPC: 
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref SourceVpcCIDR
+      EnableDnsHostnames: true
+      Tags: 
+        - Key: Name 
+          Value: !Ref SourceEnvironmentName
+
+  SourceInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Ref SourceEnvironmentName
+      
+  SourceInternetGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref SourceInternetGateway
+      VpcId: !Ref SourceVPC
+
+  SourcePublicSubnet1: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref SourceVPC
+      AvailabilityZone: !Select [ 0, !GetAZs '' ]
+      CidrBlock: !Ref SourcePublicSubnet1CIDR
+      MapPublicIpOnLaunch: true
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${SourceEnvironmentName} Public Subnet (AZ1)
+
+  SourcePublicSubnet2: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref SourceVPC
+      AvailabilityZone: !Select [ 1, !GetAZs '' ]
+      CidrBlock: !Ref SourcePublicSubnet2CIDR
+      MapPublicIpOnLaunch: true
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${SourceEnvironmentName} Public Subnet (AZ2)
+          
+  SourcePublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties: 
+      VpcId: !Ref SourceVPC
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${SourceEnvironmentName} Public Routes
+
+  SourceDefaultPublicRoute: 
+    Type: AWS::EC2::Route
+    DependsOn: SourceInternetGatewayAttachment
+    Properties: 
+      RouteTableId: !Ref SourcePublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref SourceInternetGateway
+
+  SourcePublicSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref SourcePublicRouteTable
+      SubnetId: !Ref SourcePublicSubnet1
+
+  SourcePublicSubnet2RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref SourcePublicRouteTable
+      SubnetId: !Ref SourcePublicSubnet2
+      
+  SourceJamAppSecurityGroup:
+      Type: AWS::EC2::SecurityGroup
+      Properties:
+          GroupDescription: paws and whiskers application ec2 security group
+          GroupName: paws-and-whiskers-ec2-sg
+          SecurityGroupIngress:
+          - CidrIp: '0.0.0.0/0'
+            IpProtocol: tcp
+            ToPort: 8080
+            FromPort: 8080
+          VpcId: !Ref SourceVPC
+
+  SourceCloudWatchLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties: 
+          LogGroupName: "EC2/paws-and-whiskers-app-source-logs"
+          RetentionInDays: 14
+
+  SourceEC2InstanceIAMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: sts:AssumeRole
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser
+
+
+  SourceEC2InstanceIAMProfile: 
+    Type: AWS::IAM::InstanceProfile
+    Properties: 
+      Path: "/"
+      Roles: 
+        - !Ref SourceEC2InstanceIAMRole
+        
+        
+  SourceEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Metadata:
+      'AWS::CloudFormation::Init':
+        configSets:
+          application_install:
+            - install_cfn
+            - install_java_and_tomact
+        install_cfn:
+          files:
+            /etc/cfn/cfn-hup.conf:
+              content: !Sub | 
+                    [main]
+                    stack=${AWS::StackId}
+                    region=${AWS::Region}
+                    verbose=true
+                    interval=5
+              mode: '000400'
+              owner: root
+              group: root
+            /etc/cfn/hooks.d/cfn-auto-reloader.conf:
+              content: !Sub |
+                    [cfn-auto-reloader-hook]
+                    triggers=post.update
+                    path=Resources.WebServer.Metadata.AWS::CloudFormation::Init
+                    action=/opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource SourceEC2Instance --configsets application_install --region ${AWS::Region}
+              mode: '000400'
+              owner: root
+              group: root
+          services:
+            sysvinit:
+              cfn-hup:
+                enabled: 'true'
+                ensureRunning: 'true'
+                files:
+                  - /etc/cfn/cfn-hup.conf
+                  - /etc/cfn/hooks.d/cfn-auto-reloader.conf
+        install_java_and_tomact:
+          commands:
+            01_enable_corretto8:
+              command: amazon-linux-extras enable corretto8
+            02_enable_corretto8:
+              command: amazon-linux-extras enable tomcat8.5 
+            03_enable_docker:
+              command: amazon-linux-extras enable docker
+            04_clean_metadata:
+              command: yum clean metadata
+            05_run_repo-list:
+              command: yum repolist
+            06_install_packages:
+              command: yum install -y java-1.8.0-amazon-corretto tomcat git docker
+            07_clone_repo:
+              command: git clone https://github.com/vimala-pydi/pawsandwhiskers.git
+            08_copy_app_war_file:
+              command: cp -f pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war /var/lib/tomcat/webapps/ROOT.war
+            09_copy_app_war_file_to_root:
+              command: cp -f pawsandwhiskers/tomcat/webapps/pawsandwhiskers.war /root/ROOT.war
+          services:
+            systemd:
+              tomcat:
+                enabled: 'true'
+                ensureRunning: 'true'
+              containerd:
+                enabled: 'true'
+                ensureRunning: 'true'
+              docker:
+                enabled: 'true'
+                ensureRunning: 'true'
+    Properties:
+      InstanceType: !Ref SourceEC2InstanceType
+      ImageId: !Ref SourceLatestAmiId
+      IamInstanceProfile: !Ref SourceEC2InstanceIAMProfile
+      SubnetId: !Ref SourcePublicSubnet1
+      SecurityGroupIds:
+        - !Ref SourceJamAppSecurityGroup
+      Tags:
+        - Key: Environment
+          Value: Source
+        - Key: Name
+          Value: paws-and-whiskers-app-server
+
+      UserData: 
+        Fn::Base64: 
+           !Sub |
+              #!/bin/bash -xe
+              /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource SourceEC2Instance --configsets application_install --region ${AWS::Region}
+              /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource SourceEC2Instance --region ${AWS::Region}
+              sleep 30
+              yum remove cloud-init -y
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT15M
+          
+          
+# Target ENV Resources 
+  TargetVPC: 
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref TargetVpcCIDR
+      EnableDnsHostnames: true
+      Tags: 
+        - Key: Name 
+          Value: !Ref TargetEnvironmentName
+      
+  TargetInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Ref TargetEnvironmentName
+      
+  TargetInternetGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref TargetInternetGateway
+      VpcId: !Ref TargetVPC
+
+  TargetPublicSubnet1: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref TargetVPC
+      AvailabilityZone: !Select [ 0, !GetAZs '' ]
+      CidrBlock: !Ref TargetPublicSubnet1CIDR
+      MapPublicIpOnLaunch: true
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Public Subnet (AZ1)
+
+  TargetPublicSubnet2: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref TargetVPC
+      AvailabilityZone: !Select [ 1, !GetAZs '' ]
+      CidrBlock: !Ref TargetPublicSubnet2CIDR
+      MapPublicIpOnLaunch: true
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Public Subnet (AZ2)
+
+  TargetPrivateSubnet1: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref TargetVPC
+      AvailabilityZone: !Select [ 0, !GetAZs '' ]
+      CidrBlock: !Ref TargetPrivateSubnet1CIDR
+      MapPublicIpOnLaunch: false
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Private Subnet (AZ1)
+        - Key: "kubernetes.io/role/internal-elb"
+          Value: "1"
+
+  TargetPrivateSubnet2: 
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref TargetVPC
+      AvailabilityZone: !Select [ 1, !GetAZs '' ]
+      CidrBlock: !Ref TargetPrivateSubnet2CIDR
+      MapPublicIpOnLaunch: false
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Private Subnet (AZ2)
+        - Key: "kubernetes.io/role/internal-elb"
+          Value: "1"
+
+  TargetNatGateway1EIP:
+    Type: AWS::EC2::EIP
+    DependsOn: TargetInternetGatewayAttachment
+    Properties: 
+      Domain: vpc
+
+  TargetNatGateway2EIP:
+    Type: AWS::EC2::EIP
+    DependsOn: TargetInternetGatewayAttachment
+    Properties:
+      Domain: vpc
+
+  TargetNatGateway1: 
+    Type: AWS::EC2::NatGateway
+    Properties: 
+      AllocationId: !GetAtt TargetNatGateway1EIP.AllocationId
+      SubnetId: !Ref TargetPublicSubnet1
+
+  TargetNatGateway2: 
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt TargetNatGateway2EIP.AllocationId
+      SubnetId: !Ref TargetPublicSubnet2
+
+  TargetPublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties: 
+      VpcId: !Ref TargetVPC
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Public Routes
+
+  TargetDefaultPublicRoute: 
+    Type: AWS::EC2::Route
+    DependsOn: TargetInternetGatewayAttachment
+    Properties: 
+      RouteTableId: !Ref TargetPublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref TargetInternetGateway
+
+  TargetPublicSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref TargetPublicRouteTable
+      SubnetId: !Ref TargetPublicSubnet1
+
+  TargetPublicSubnet2RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref TargetPublicRouteTable
+      SubnetId: !Ref TargetPublicSubnet2
+  
+  TargetPrivateRouteTable1:
+    Type: AWS::EC2::RouteTable
+    Properties: 
+      VpcId: !Ref TargetVPC
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Private Routes (AZ1)
+
+  TargetDefaultPrivateRoute1:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref TargetPrivateRouteTable1
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref TargetNatGateway1
+
+  TargetPrivateSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref TargetPrivateRouteTable1
+      SubnetId: !Ref TargetPrivateSubnet1
+
+  TargetPrivateRouteTable2:
+    Type: AWS::EC2::RouteTable
+    Properties: 
+      VpcId: !Ref TargetVPC
+      Tags: 
+        - Key: Name 
+          Value: !Sub ${TargetEnvironmentName} Private Routes (AZ2)
+
+  TargetDefaultPrivateRoute2:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref TargetPrivateRouteTable2
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref TargetNatGateway2
+
+  TargetPrivateSubnet2RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref TargetPrivateRouteTable2
+      SubnetId: !Ref TargetPrivateSubnet2
+
+  ECSTaskPolicyJamApp:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      Description: Managed policy for the ECS Task roles
+      ManagedPolicyName: !Sub "${TargetEnvironmentName}-ECS-TaskPolicy"
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              # Allow the ECS Tasks to download images from ECR
+              - 'ecr:GetAuthorizationToken'
+              - 'ecr:BatchCheckLayerAvailability'
+              - 'ecr:GetDownloadUrlForLayer'
+              - 'ecr:BatchGetImage'
+              # Allow the ECS tasks to upload logs to CloudWatch
+              - 'logs:CreateLogStream'
+              - 'logs:PutLogEvents'
+            Resource: '*'
+
+  ECSTaskExecutionPolicyJamApp:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      Description: Managed policy for the ECS Task execution roles
+      ManagedPolicyName: !Sub "${TargetEnvironmentName}-ECS-TaskExecPolicy"
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              # Allow the ECS Tasks to download images from ECR
+              - 'ecr:GetAuthorizationToken'
+              - 'ecr:BatchCheckLayerAvailability'
+              - 'ecr:GetDownloadUrlForLayer'
+              - 'ecr:BatchGetImage'
+              # Allow the ECS tasks to upload logs to CloudWatch
+              - 'logs:CreateLogStream'
+              - 'logs:PutLogEvents'
+              # Allow the ECS tasks to register into the target group
+              - 'elasticloadbalancing:DeregisterInstancesFromLoadBalancer'
+              - 'elasticloadbalancing:Describe*'
+              - 'elasticloadbalancing:RegisterInstancesWithLoadBalancer'
+              - 'elasticloadbalancing:DeregisterTargets'
+              - 'elasticloadbalancing:DescribeTargetGroups'
+              - 'elasticloadbalancing:DescribeTargetHealth'
+              - 'elasticloadbalancing:RegisterTargets'
+            Resource: '*'
+            
+  ECSTaskExecRoleJamApp:
+    Type: "AWS::IAM::Role"
+    Properties: 
+      RoleName: !Sub "${TargetEnvironmentName}-ECS-TaskExecRole"
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "ecs.amazonaws.com"
+                - "ecs-tasks.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+          - 
+            Effect: "Allow"
+            Principal: 
+              AWS: 
+                - !Sub "arn:aws:iam::${AWS::AccountId}:root"
+            Action: 
+              - "sts:AssumeRole"
+      Path: "/"
+      ManagedPolicyArns:
+        - !Ref ECSTaskExecutionPolicyJamApp
+        - "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"
+        - "arn:aws:iam::aws:policy/CloudWatchFullAccess"
+        - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+
+  ECSTaskRoleJamApp:
+    Type: "AWS::IAM::Role"
+    Properties: 
+      RoleName: !Sub "${TargetEnvironmentName}-ECS-TaskRole"
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "ecs.amazonaws.com"
+                - "ecs-tasks.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+          - 
+            Effect: "Allow"
+            Principal: 
+              AWS: 
+                - !Sub "arn:aws:iam::${AWS::AccountId}:root"
+            Action: 
+              - "sts:AssumeRole"
+      Path: "/"
+      ManagedPolicyArns:
+        - !Ref ECSTaskPolicyJamApp
+        - "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"
+        - "arn:aws:iam::aws:policy/CloudWatchFullAccess"
+        - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+
+  TargetJamAppSecurityGroup:
+      Type: AWS::EC2::SecurityGroup
+      Properties:
+          GroupDescription: jam app security group
+          GroupName: paws-and-whiskers-target-ecs-svc-sg
+          SecurityGroupIngress:
+          - SourceSecurityGroupId: !Ref TargetJamAppECSLBSecurityGroup
+            IpProtocol: tcp
+            ToPort: 8080
+            FromPort: 8080
+          VpcId: !Ref TargetVPC
+
+  TargetJamAppECSLBSecurityGroup:
+      Type: AWS::EC2::SecurityGroup
+      Properties:
+          GroupDescription: JAM Application load balancer security group
+          GroupName: paws-and-whiskers-target-ecs-lb-sg
+          SecurityGroupIngress:
+          - CidrIp: '0.0.0.0/0'
+            IpProtocol: tcp
+            ToPort: 80
+            FromPort: 80
+          VpcId: !Ref TargetVPC
+
+  TargetCloudWatchLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties: 
+          LogGroupName: "ecs/paws-and-whiskers-target-app-logs"
+          RetentionInDays: 7
+
+  TargetEcsLoadBalancer:
+      Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+      Properties: 
+        IpAddressType: ipv4
+        Name: paws-and-whiskers-target-alb
+        Scheme: internet-facing
+        SecurityGroups: 
+          - !Ref TargetJamAppECSLBSecurityGroup
+        Subnets: 
+          - !Ref TargetPublicSubnet1
+          - !Ref TargetPublicSubnet2
+        Type: application
+
+  TargetEcsLbTargetGroup:
+      Type: AWS::ElasticLoadBalancingV2::TargetGroup
+      Properties: 
+        Name: paws-and-whiskers-target-alb-tg
+        VpcId: !Ref TargetVPC
+        Protocol: HTTP
+        Port: 80
+        TargetType: ip
+        IpAddressType: ipv4
+
+  TargetEcsLbListener:
+    Type: 'AWS::ElasticLoadBalancingV2::Listener'
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetEcsLbTargetGroup
+      LoadBalancerArn: !Ref TargetEcsLoadBalancer
+      Port: 80
+      Protocol: HTTP
+
+  TargetECSCluster:
+    Type: 'AWS::ECS::Cluster'
+    Properties:
+      ClusterName: paws-and-whiskers-target-ecs-cluster 
+          
+  TargetECRrepo:
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: paws-and-whiskers-target-app
+      ImageScanningConfiguration: 
+        ScanOnPush: true
+        
+        
+  TargetRefactorSpacesEnvironment:
+    Type: AWS::RefactorSpaces::Environment
+    DeletionPolicy: Delete
+    Properties:
+      Name: paws-and-whiskers-target-rs-env
+      NetworkFabricType: NONE
+      Description: "Creating RefactorSpaces to enhance the customer application experience"
+
+  TargetJamRefactorSpacesApplication:
+    Type: AWS::RefactorSpaces::Application
+    DeletionPolicy: Delete
+    DependsOn:
+      - TargetPrivateSubnet1
+      - TargetPrivateSubnet2
+    Properties:
+      Name: paws-and-whiskers-target-app
+      EnvironmentIdentifier: !Ref TargetRefactorSpacesEnvironment
+      VpcId: !Ref TargetVPC
+      ProxyType: API_GATEWAY
+      ApiGatewayProxy:
+        EndpointType: "REGIONAL"
+
+
+Outputs:
+
+#SourceURL
+  pawsandwiskerssourceurl:
+    Description: URL to access the Source application
+    Value: !Sub http://${SourceEC2Instance.PublicDnsName}:8080/
+    
+#TargetALBUrl
+  pawsandwiskerstargetalb:
+    Description: ALB to use for Paws and wiskers target ECS service
+    Value: !GetAtt TargetEcsLoadBalancer.DNSName
+
+
+  
+
+
+
