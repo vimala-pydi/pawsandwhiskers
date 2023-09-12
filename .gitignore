@@ -12,3 +12,5 @@ tomcat/logs/*
 .history/*
 .vscode/*
 target/pawsandwhiskers/*
+*.DS_Store
+
