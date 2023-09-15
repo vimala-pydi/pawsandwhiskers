@@ -35,8 +35,13 @@
     </div>
     <script>
         const dogList = document.getElementById('dogImageList');
-        const backgroundColors = ['#f4d942', '#83d4fa', '#a9e34b', '#ffa8a8', '#b19cd9'];
-
+        const backgroundColors = [
+        'rgba(244, 217, 66, 0.3)',   // Yellow with 50% transparency
+        'rgba(131, 212, 250, 0.3)',  // Light blue with 50% transparency
+        'rgba(169, 227, 75, 0.3)',   // Green with 50% transparency
+        'rgba(177, 156, 217, 0.3)'   // Purple with 50% transparency
+      ];
+        
         fetch('ImageDisplayServlet')
             .then(response => response.json())
             .then(imageUrls => {
