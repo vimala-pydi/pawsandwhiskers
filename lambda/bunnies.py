@@ -28,7 +28,12 @@ def generate_html_response(images):
     num_rows = (len(images) + 2) // 3  # Add 2 to round up to the nearest integer
 
     # Define a list of background colors for tiles
-    tile_colors = ['#f4d942', '#83d4fa', '#a9e34b', '#ffa8a8', '#b19cd9', '#c4d6b0']
+    tile_colors =  [
+        'rgba(244, 217, 66, 0.3)',  
+        'rgba(131, 212, 250, 0.3)',  
+        'rgba(169, 227, 75, 0.3)',   
+        'rgba(177, 156, 217, 0.3)'   
+      ];
 
     # Iterate through the rows
     for row in range(num_rows):
@@ -43,7 +48,7 @@ def generate_html_response(images):
                 img_tag = f"<img src='{images[index]}' alt='Image' style='max-width: 100%; height: auto; width: 33.33%;'>"
 
                 # Get the background color for the current tile
-                tile_color = tile_colors[(row * 3 + i) % len(tile_colors)]
+                #tile_color = tile_colors[(row * 3 + i) % len(tile_colors)]
 
                 # Create a div with the image and background color
                 tile = f"<div style='margin: 10px; width: 33.33%; background-color: {tile_color};'>{img_tag}</div>"
